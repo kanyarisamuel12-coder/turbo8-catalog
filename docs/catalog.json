@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "cartridges": [
+    {
+      "id": "celeste-classic-de4ff09a7b",
+      "title": "Celeste Classic",
+      "source_file": "Celeste Classic.zip",
+      "bytes": 78108,
+      "sha256": "3c78c4596553962614579bb0b72d2a71e2836ac09dc0195e67764db9bde38fef",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "celeste-classic-de4ff09a7b-v1.0.0.zip"
+    },
+    {
+      "id": "celeste-wide-f4398b3be7",
+      "title": "Celeste Wide",
+      "source_file": "Celeste Wide.zip",
+      "bytes": 77185,
+      "sha256": "4236bed0474764b5a709345fb4c2482fc2e87ebb301c8e9bd2787493834c7366",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "celeste-wide-f4398b3be7-v1.0.0.zip"
+    },
+    {
+      "id": "greenlegion-2db1031050",
+      "title": "greenlegion",
+      "source_file": "greenlegion.zip",
+      "bytes": 79942,
+      "sha256": "015750bfdd3c8ec4d255966758f1dce83cf3740b2c00adc5aa37d4e86d3f29ef",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "greenlegion-2db1031050-v1.0.0.zip"
+    },
+    {
+      "id": "moonfall-27dc52e312",
+      "title": "MoonFall",
+      "source_file": "MoonFall.zip",
+      "bytes": 16718,
+      "sha256": "ad83d771ecb835264d14b5470d44e98498067003e2e60e32694829748777924c",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "moonfall-27dc52e312-v1.0.0.zip"
+    },
+    {
+      "id": "mushroom-skyline-2ec430f806",
+      "title": "Mushroom Skyline",
+      "source_file": "Mushroom Skyline.zip",
+      "bytes": 78517,
+      "sha256": "f5cd9f9e43e44459204efbe8faee27b944f404413939a80fe6142f80f778173d",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "mushroom-skyline-2ec430f806-v1.0.0.zip"
+    },
+    {
+      "id": "sonic-25-sage-0-fbef393db1",
+      "title": "sonic_25_sage-0",
+      "source_file": "sonic_25_sage-0.zip",
+      "bytes": 90303,
+      "sha256": "489666f39a3ca0db8a506c9f44410d7c1a9db6105cd6b9997a199b13218d2896",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "sonic-25-sage-0-fbef393db1-v1.0.0.zip"
+    },
+    {
+      "id": "cart-d3dff2e25a",
+      "title": "功夫·首关移植",
+      "source_file": "功夫·首关移植.zip",
+      "bytes": 41385,
+      "sha256": "7a28f982e7ac105e90bec14d2da9c88a9855ea43bc4a00d1eeea719902fce0bc",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-d3dff2e25a-v1.0.0.zip"
+    },
+    {
+      "id": "cart-dbef293f13",
+      "title": "华强买瓜",
+      "source_file": "华强买瓜.zip",
+      "bytes": 17491,
+      "sha256": "bf1d23c324b76af42fce647f7040bc82926585623bf47626a34f50721f61951a",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-dbef293f13-v1.0.0.zip"
+    },
+    {
+      "id": "cart-f8035d24cb",
+      "title": "华强买瓜·小镇篇",
+      "source_file": "华强买瓜·小镇篇.zip",
+      "bytes": 49400,
+      "sha256": "42765c5d0f7f5caef2bdb21cb5b1842c683526e77b14b8f303f15da02a727839",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-f8035d24cb-v1.0.0.zip"
+    },
+    {
+      "id": "cart-efada6dc09",
+      "title": "坦克大战移植",
+      "source_file": "坦克大战移植.zip",
+      "bytes": 17616,
+      "sha256": "be99768cdc79d4d8849062b1f2a2bd1ed0858cd3da9915a2d41dd6389d4e4c07",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-efada6dc09-v1.0.0.zip"
+    },
+    {
+      "id": "cart-7e911293d9",
+      "title": "威尼斯之影",
+      "source_file": "威尼斯之影.zip",
+      "bytes": 19153,
+      "sha256": "49faa4d14da4c6d4eda8f8d6c0050ddbfbc9aee3a4202c696728603ffff72ec5",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-7e911293d9-v1.0.0.zip"
+    },
+    {
+      "id": "cart-ca5e369d43",
+      "title": "成龙踢馆·功夫之路",
+      "source_file": "成龙踢馆·功夫之路.zip",
+      "bytes": 16920,
+      "sha256": "b028e39b738ad602a691d4d3e485e957c1ab4f4ef8faa48312c5e85cc4ed86a3",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-ca5e369d43-v1.0.0.zip"
+    },
+    {
+      "id": "cart-0408eece05",
+      "title": "海风单车·鹈鹕快递",
+      "source_file": "海风单车·鹈鹕快递.zip",
+      "bytes": 17256,
+      "sha256": "24dabec86f874d9e6d57c9f18647a2d431f227be5e4cb093cc0f251d1758aece",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-0408eece05-v1.0.0.zip"
+    },
+    {
+      "id": "cart-a7e112475d",
+      "title": "爆破禁区",
+      "source_file": "爆破禁区.zip",
+      "bytes": 15903,
+      "sha256": "049c1e2e4a4c2c87dc022763e97468819b37f4b9df10d5197f880a4adc67a73b",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-a7e112475d-v1.0.0.zip"
+    },
+    {
+      "id": "cart-db7e0457c2",
+      "title": "猪妈妈气球保卫战",
+      "source_file": "猪妈妈气球保卫战.zip",
+      "bytes": 15639,
+      "sha256": "7e3ea10c9924c56d05292819e45462fde92999bc277ed996ac15241a111d354f",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-db7e0457c2-v1.0.0.zip"
+    },
+    {
+      "id": "cart-4e493a1cc4",
+      "title": "绿色军团·宽屏版",
+      "source_file": "绿色军团·宽屏版.zip",
+      "bytes": 82947,
+      "sha256": "470e88cc734584b8fc9e18cd7ec304d5bc34aedef63d1fbd7095caf81aa0feb3",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-4e493a1cc4-v1.0.0.zip"
+    },
+    {
+      "id": "cart-e04b9c1f39",
+      "title": "蓝芯战士",
+      "source_file": "蓝芯战士.zip",
+      "bytes": 20420,
+      "sha256": "739b5a6b663107edbc3299b85109db8e61bdeb9d83f2eccd6c0de9303c0f1c5f",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-e04b9c1f39-v1.0.0.zip"
+    },
+    {
+      "id": "cart-ce0c38cf46",
+      "title": "赤色要塞：第一人称突击",
+      "source_file": "赤色要塞：第一人称突击.zip",
+      "bytes": 15485,
+      "sha256": "2da629164c8a5e7815247db5bf812c27b50ec2a67f9baf7f9bcbb554464cb9e6",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-ce0c38cf46-v1.0.0.zip"
+    },
+    {
+      "id": "cart-0dfa46cd68",
+      "title": "赤隼行动·丛林突击",
+      "source_file": "赤隼行动·丛林突击.zip",
+      "bytes": 19240,
+      "sha256": "20ce402010287befc6d66ab0bedb4085ece24c03d42b99c0d735318d0a7e6e53",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-0dfa46cd68-v1.0.0.zip"
+    },
+    {
+      "id": "cart-848e2cd48d",
+      "title": "赤隼行动·重装突击",
+      "source_file": "赤隼行动·重装突击.zip",
+      "bytes": 31045,
+      "sha256": "306414739e5c931c0bf74cc6c620b4be758411eeffb67726ddbcb44d07abf5b9",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "cart-848e2cd48d-v1.0.0.zip"
+    },
+    {
+      "id": "3-724b714f3a",
+      "title": "超级马里奥3移植",
+      "source_file": "超级马里奥3移植.zip",
+      "bytes": 135080,
+      "sha256": "56c161e068cf82b812e0bd226f1731ae73ae3d22fa56fdd2e125bb3dd2f69ac1",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "3-724b714f3a-v1.0.0.zip"
+    },
+    {
+      "id": "3-2-6b6cfb1754",
+      "title": "超级马里奥3移植 (2)",
+      "source_file": "超级马里奥3移植 (2).zip",
+      "bytes": 137573,
+      "sha256": "29265be9732ba2c63f072f80cd60083af66bace6db051c8edcc071b6ca1428ed",
+      "version": "1.0.0",
+      "tag": "carts-20260924030935",
+      "asset": "3-2-6b6cfb1754-v1.0.0.zip"
+    }
+  ],
+  "updated_at": "2026-09-24T03:09:43.277277+00:00"
+}
