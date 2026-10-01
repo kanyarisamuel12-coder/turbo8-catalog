@@ -52,6 +52,16 @@
       "asset": "moonfall-27dc52e312-v1.0.1.zip"
     },
     {
+      "id": "moonlit-balloon-guard-362fecfc2e",
+      "title": "Moonlit Balloon Guard",
+      "source_file": "Moonlit Balloon Guard.zip",
+      "bytes": 21980,
+      "sha256": "9870d04cb5d6d14445088596599472ba932d03b12ecfa4ba136f18980c195795",
+      "version": "1.0.0",
+      "tag": "carts-20261001172250",
+      "asset": "moonlit-balloon-guard-362fecfc2e-v1.0.0.zip"
+    },
+    {
       "id": "sonic-25-sage-0-fbef393db1",
       "title": "sonic_25_sage-0",
       "source_file": "sonic_25_sage-0.zip",
@@ -162,16 +172,6 @@
       "asset": "cart-a7e112475d-v1.0.1.zip"
     },
     {
-      "id": "cart-db7e0457c2",
-      "title": "猪妈妈气球保卫战",
-      "source_file": "猪妈妈气球保卫战.zip",
-      "bytes": 15639,
-      "sha256": "7e3ea10c9924c56d05292819e45462fde92999bc277ed996ac15241a111d354f",
-      "version": "1.0.1",
-      "tag": "carts-20261001134220",
-      "asset": "cart-db7e0457c2-v1.0.1.zip"
-    },
-    {
       "id": "cart-4e493a1cc4",
       "title": "绿色军团·宽屏版",
       "source_file": "绿色军团·宽屏版.zip",
@@ -212,5 +212,5 @@
       "asset": "cart-848e2cd48d-v1.0.1.zip"
     }
   ],
-  "updated_at": "2026-10-01T13:42:27.877871+00:00"
+  "updated_at": "2026-10-01T17:22:54.827861+00:00"
 }
