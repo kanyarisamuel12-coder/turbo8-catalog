@@ -9,6 +9,28 @@ using your provider's credentials. This mode does **not** need Codex CLI or
 Node.js. If you want ChatGPT sign-in instead, choose **Codex** and follow the
 separate guide linked above.
 
+### Recommended: OpenAI GPT-6 / GPT-6.1
+
+We recommend the **OpenAI GPT-6 family** for AI-assisted game creation in Turbo8.
+Start with **GPT-6.1 Sol** using the concrete settings below; confirm access and
+pricing in your own OpenAI account before sending requests.
+
+| Setting | GPT-6.1 example |
+| --- | --- |
+| Provider | **OpenAI** |
+| ENDPOINT | `https://api.openai.com/v1` |
+| API KEY | Your own OpenAI API key |
+| MODEL | `gpt-6.1-sol` |
+| API PROTOCOL | **Responses** (or **Auto (recommended)** at this official URL) |
+| REASONING EFFORT | **Medium** |
+
+Use the exact model ID `gpt-6.1-sol`, not the shorthand `gpt6.1`. This model needs
+Responses for tool calling, which Turbo8 uses to edit games. Medium is a supported
+starting point; do not select None or Minimal for this model. See the
+[official GPT-6.1 Sol documentation](https://developers.openai.com/api/docs/models/gpt-6.1-sol).
+If your account cannot access it, choose another documented model you can access
+and check its tool/protocol support. This example does not change your saved model.
+
 ### Quick setup
 
 1. Obtain an API key from the provider's own dashboard. Confirm model access and
@@ -93,6 +115,26 @@ provider dashboard. See [OpenAI API authentication and key safety](https://devel
 API 模式直接连接你选择的服务商，不需要安装 Codex CLI 或 Node.js。若要使用 ChatGPT
 账号登录，请切到 **Codex**，参阅[另一份指引](codex-setup.md)。ChatGPT 订阅不是 API
 余额；API 权限、计费和用量请在对应服务商的后台确认。
+
+### 推荐使用 OpenAI GPT-6 / GPT-6.1
+
+推荐使用 **OpenAI GPT-6 系列**进行 Turbo8 AI 游戏创作，可从 **GPT-6.1 Sol** 开始。
+以下直接以 GPT-6.1 为例；调用前请在自己的 OpenAI 账号中确认模型权限和费用。
+
+| 设置项 | GPT-6.1 示例 |
+| --- | --- |
+| Provider | **OpenAI** |
+| ENDPOINT | `https://api.openai.com/v1` |
+| API KEY | 你自己的 OpenAI API Key |
+| MODEL | `gpt-6.1-sol` |
+| API PROTOCOL | **Responses**（这个官方地址也可以选 **Auto (recommended)**） |
+| REASONING EFFORT | **Medium** |
+
+模型名要填写完整的 `gpt-6.1-sol`，不要只写 `gpt6.1`。Turbo8 编辑游戏需要工具调用，
+此模型应使用 Responses 协议；推理强度可先选 Medium，不要选 None 或 Minimal。
+详见 [GPT-6.1 Sol 官方文档](https://developers.openai.com/api/docs/models/gpt-6.1-sol)。
+如果账号暂时没有权限，请自行选择有权限的模型并确认其工具调用和协议支持；
+本示例不会替换你已保存的模型设置。
 
 ### 配置顺序
 
