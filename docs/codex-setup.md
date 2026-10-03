@@ -53,6 +53,20 @@ and limits depend on the account; installation does not grant them. This Turbo8
 provider uses ChatGPT sign-in, not an API key entered in Turbo8. See
 [OpenAI authentication guidance](https://developers.openai.com/codex/auth/).
 
+### Recommended model: GPT-6 / GPT-6.1
+
+For Turbo8 AI game creation, we recommend the **OpenAI GPT-6 family**, starting
+with **GPT-6.1 Sol** (`gpt-6.1-sol`) when available. After **CONNECTED**, select it
+in Turbo8's model list and save your settings. You can also choose **GPT-6 Sol**
+(`gpt-6-sol`) if it is available to your account. Start with the model's default
+reasoning effort and increase it for more complex tasks.
+
+Use the models actually returned for your account. A missing model does not by
+itself mean your CLI is outdated: access also depends on your plan, workspace
+policy and rollout. Updating Codex does not grant model access. See the
+[official Codex model guide](https://learn.chatgpt.com/docs/models).
+This recommendation does not automatically replace your saved model.
+
 ### Troubleshooting
 
 - **“Install Codex CLI and Node.js…”**: Turbo8 cannot locate one of the executables.
@@ -102,6 +116,18 @@ Node.js。即使 Codex 使用独立安装方式，Turbo8 的本地工具适配�
    **COPY CODE** 复制验证码。账号或组织可能需要先允许设备码登录。
 5. 显示 **CONNECTED** 后选择可用模型并保存设置。是否可用及额度取决于账号，
    安装工具本身不会提供额度。本接入使用 ChatGPT 登录，不是在 Turbo8 中填写 API Key。
+
+### 推荐模型：GPT-6 / GPT-6.1
+
+推荐使用 **OpenAI GPT-6 系列**进行 Turbo8 AI 游戏创作，优先选择
+**GPT-6.1 Sol**（`gpt-6.1-sol`）。显示 **CONNECTED** 后，在 Turbo8 的模型列表中
+选择它并保存设置；也可以选择账号可用的 **GPT-6 Sol**（`gpt-6-sol`）。
+推理强度先使用模型默认值，复杂任务再提高。
+
+请以账号实际返回的模型列表为准。模型没有出现不一定是 CLI 太旧，也可能与套餐、
+组织策略或开放进度有关；升级 CLI 不会自动获得模型权限。详见
+[Codex 官方模型指引](https://learn.chatgpt.com/docs/models)。以上推荐不会自动替换
+你已保存的模型设置。
 
 ### 装好了仍提示未安装？
 
