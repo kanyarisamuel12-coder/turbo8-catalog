@@ -134,6 +134,20 @@
       "asset": "turbo-video-6b6f686fe0-v1.0.0.zip"
     },
     {
+      "id": "turbo-web-35bfabfbb7",
+      "title": "Turbo Web",
+      "source_file": "Turbo Web.zip",
+      "bytes": 21964,
+      "sha256": "61159726456691ed1759afbfb7495f1f9f0587de9dd7b48e2af9828da17239df",
+      "resolution": {
+        "width": 320,
+        "height": 240
+      },
+      "version": "1.4.0",
+      "tag": "carts-20261006173912",
+      "asset": "turbo-web-35bfabfbb7-v1.4.0.zip"
+    },
+    {
       "id": "turbo95-f15feb1ebd",
       "title": "Turbo95",
       "source_file": "Turbo95.zip",
@@ -258,5 +272,5 @@
       "asset": "cart-848e2cd48d-v1.0.1.zip"
     }
   ],
-  "updated_at": "2026-10-06T15:55:36.547588+00:00"
+  "updated_at": "2026-10-06T17:39:16.930519+00:00"
 }
