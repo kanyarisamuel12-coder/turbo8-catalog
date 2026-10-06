@@ -42,6 +42,20 @@
       "asset": "flush-express-65f44df802-v1.0.0.zip"
     },
     {
+      "id": "cart-4e493a1cc4",
+      "title": "Green Legion Wide",
+      "source_file": "绿色军团·宽屏版.zip",
+      "bytes": 82924,
+      "sha256": "947057443c71a74b0aeb9146b6ba1de7807904c4d2f2298e34e3b4ccc49f7f8a",
+      "resolution": {
+        "width": 256,
+        "height": 144
+      },
+      "version": "1.0.2",
+      "tag": "carts-20261006155531",
+      "asset": "cart-4e493a1cc4-v1.0.2.zip"
+    },
+    {
       "id": "greenlegion-2db1031050",
       "title": "greenlegion",
       "source_file": "greenlegion.zip",
@@ -72,6 +86,20 @@
       "asset": "moonlit-balloon-guard-362fecfc2e-v1.0.0.zip"
     },
     {
+      "id": "neon-wake-e0839d391a",
+      "title": "Neon Wake",
+      "source_file": "Neon Wake.zip",
+      "bytes": 49330,
+      "sha256": "41beaac6475911a15ac061b5f6dc38e57d75c1f9302b303585a40f4e74a86c82",
+      "resolution": {
+        "width": 144,
+        "height": 256
+      },
+      "version": "1.0.0",
+      "tag": "carts-20261006155531",
+      "asset": "neon-wake-e0839d391a-v1.0.0.zip"
+    },
+    {
       "id": "sonic-25-sage-0-fbef393db1",
       "title": "sonic_25_sage-0",
       "source_file": "sonic_25_sage-0.zip",
@@ -90,6 +118,34 @@
       "version": "1.0.0",
       "tag": "carts-20261001134220",
       "asset": "turbo-invation-a5dcc9d306-v1.0.0.zip"
+    },
+    {
+      "id": "turbo-video-6b6f686fe0",
+      "title": "Turbo Video",
+      "source_file": "Turbo Video.zip",
+      "bytes": 12545,
+      "sha256": "ce304fe9ee6b0aea4ea69b734b137570328952504c4654a14d0c22970f3ae6fb",
+      "resolution": {
+        "width": 320,
+        "height": 240
+      },
+      "version": "1.0.0",
+      "tag": "carts-20261006155531",
+      "asset": "turbo-video-6b6f686fe0-v1.0.0.zip"
+    },
+    {
+      "id": "turbo95-f15feb1ebd",
+      "title": "Turbo95",
+      "source_file": "Turbo95.zip",
+      "bytes": 17285,
+      "sha256": "0785e8c2f87744cc019e0142a0d58849809f9f954879754aec7ab32ee0eb4252",
+      "resolution": {
+        "width": 320,
+        "height": 240
+      },
+      "version": "1.0.0",
+      "tag": "carts-20261006155531",
+      "asset": "turbo95-f15feb1ebd-v1.0.0.zip"
     },
     {
       "id": "cart-93667dd103",
@@ -182,26 +238,6 @@
       "asset": "cart-a7e112475d-v1.0.1.zip"
     },
     {
-      "id": "cart-4e493a1cc4",
-      "title": "绿色军团·宽屏版",
-      "source_file": "绿色军团·宽屏版.zip",
-      "bytes": 82947,
-      "sha256": "470e88cc734584b8fc9e18cd7ec304d5bc34aedef63d1fbd7095caf81aa0feb3",
-      "version": "1.0.1",
-      "tag": "carts-20261001134220",
-      "asset": "cart-4e493a1cc4-v1.0.1.zip"
-    },
-    {
-      "id": "cart-e04b9c1f39",
-      "title": "蓝芯战士",
-      "source_file": "蓝芯战士.zip",
-      "bytes": 20420,
-      "sha256": "739b5a6b663107edbc3299b85109db8e61bdeb9d83f2eccd6c0de9303c0f1c5f",
-      "version": "1.0.1",
-      "tag": "carts-20261001134220",
-      "asset": "cart-e04b9c1f39-v1.0.1.zip"
-    },
-    {
       "id": "cart-ce0c38cf46",
       "title": "赤色要塞：第一人称突击",
       "source_file": "赤色要塞：第一人称突击.zip",
@@ -222,5 +258,5 @@
       "asset": "cart-848e2cd48d-v1.0.1.zip"
     }
   ],
-  "updated_at": "2026-10-01T18:01:21.147653+00:00"
+  "updated_at": "2026-10-06T15:55:36.547588+00:00"
 }
