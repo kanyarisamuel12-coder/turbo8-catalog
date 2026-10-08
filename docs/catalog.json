@@ -162,6 +162,20 @@
       "asset": "turbo95-f15feb1ebd-v1.0.0.zip"
     },
     {
+      "id": "vector-rush-remix-c6b6b74158",
+      "title": "Vector Rush Remix",
+      "source_file": "Vector Rush Remix.zip",
+      "bytes": 71882,
+      "sha256": "ce74e83de932dacae61a8216b987bfba947a6dc2ed522dd107d41ef6fed50143",
+      "resolution": {
+        "width": 256,
+        "height": 144
+      },
+      "version": "1.0.0",
+      "tag": "carts-20261008161943",
+      "asset": "vector-rush-remix-c6b6b74158-v1.0.0.zip"
+    },
+    {
       "id": "cart-93667dd103",
       "title": "乡村爱情·象牙山田园",
       "source_file": "乡村爱情·象牙山田园.zip",
@@ -192,16 +206,6 @@
       "asset": "cart-f8035d24cb-v1.0.1.zip"
     },
     {
-      "id": "cart-efada6dc09",
-      "title": "坦克大战移植",
-      "source_file": "坦克大战移植.zip",
-      "bytes": 17616,
-      "sha256": "be99768cdc79d4d8849062b1f2a2bd1ed0858cd3da9915a2d41dd6389d4e4c07",
-      "version": "1.0.1",
-      "tag": "carts-20261001134220",
-      "asset": "cart-efada6dc09-v1.0.1.zip"
-    },
-    {
       "id": "cart-7e911293d9",
       "title": "威尼斯之影",
       "source_file": "威尼斯之影.zip",
@@ -210,16 +214,6 @@
       "version": "1.0.1",
       "tag": "carts-20261001134220",
       "asset": "cart-7e911293d9-v1.0.1.zip"
-    },
-    {
-      "id": "cart-ca5e369d43",
-      "title": "成龙踢馆·功夫之路",
-      "source_file": "成龙踢馆·功夫之路.zip",
-      "bytes": 16920,
-      "sha256": "b028e39b738ad602a691d4d3e485e957c1ab4f4ef8faa48312c5e85cc4ed86a3",
-      "version": "1.0.1",
-      "tag": "carts-20261001134220",
-      "asset": "cart-ca5e369d43-v1.0.1.zip"
     },
     {
       "id": "cart-0408eece05",
@@ -272,5 +266,5 @@
       "asset": "cart-848e2cd48d-v1.0.1.zip"
     }
   ],
-  "updated_at": "2026-10-06T17:39:16.930519+00:00"
+  "updated_at": "2026-10-08T16:19:48.501612+00:00"
 }
