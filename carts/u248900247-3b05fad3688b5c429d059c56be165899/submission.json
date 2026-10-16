@@ -1,0 +1,13 @@
+{
+  "assets_license": "CC0-1.0",
+  "author_id": 248900247,
+  "changes": "Initial integration test",
+  "code_license": "MIT",
+  "controls": "No input required",
+  "id": "u248900247-3b05fad3688b5c429d059c56be165899",
+  "remix_of": "",
+  "schema": 1,
+  "summary": "Integration test of Turbo8's submission flow. Close this PR after validation; do not publish this fixture.",
+  "title": "Submission pipeline test",
+  "version": "1.0.0"
+}

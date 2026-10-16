@@ -1,0 +1,1 @@
+function _draw() { cls(0); print('SUBMISSION TEST', 20, 60, 7); }
