@@ -20,6 +20,8 @@ jobs:
         with:
           ref: main
           persist-credentials: false
+      - name: Test trusted catalog tooling
+        run: python3 tools/test_pipeline.py
       - name: Build and verify versioned releases
         env:
           GH_TOKEN: ${{ github.token }}

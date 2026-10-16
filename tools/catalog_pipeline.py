@@ -127,6 +127,20 @@ def validate(files, cart_id, actor=None, previous=None, check_js=True):
         allowed_files.add(name)
     require(set(cartridge) <= allowed_files, 'Unexpected cartridge file')
     require(all(s in cartridge for s in scripts), 'Missing script')
+    palette = json.loads(cartridge.get('palette.json', b'null'))
+    require(isinstance(palette, list) and 1 <= len(palette) <= 256 and all(isinstance(c, str) and re.fullmatch(r'#[a-fA-F0-9]{6}', c) for c in palette), 'Invalid or missing palette')
+    if 'sprites.json' in cartridge:
+        sprites = json.loads(cartridge['sprites.json'])
+        require(isinstance(sprites, list) and len(sprites) <= 4096, 'Invalid sprites')
+        require(all(isinstance(sprite, list) and len(sprite) <= 64 and all(c is None or isinstance(c, str) and re.fullmatch(r'#[a-fA-F0-9]{6}', c) for c in sprite) for sprite in sprites), 'Invalid sprite pixels')
+    else:
+        require('sprites.png' in cartridge, 'Missing sprites')
+        sw, sh = png_size(cartridge['sprites.png'])
+        require(1 <= sw <= 4096 and 1 <= sh <= 4096 and sw * sh <= 4096 * 64, 'Sprite sheet too large')
+    for name, limit in [('maps', 64), ('sfx', 256), ('music', 256)]:
+        if name + '.json' in cartridge:
+            resources = json.loads(cartridge[name + '.json'])
+            require(isinstance(resources, list) and len(resources) <= limit and all(isinstance(x, dict) for x in resources), 'Invalid ' + name)
     for name, raw in cartridge.items():
         if name.endswith('.json'):
             json.loads(raw)
@@ -163,7 +177,7 @@ def api(path, limit=4 * 1024 * 1024):
     return json.loads(raw)
 
 
-def tree_files(repository, commit, cart_id):
+def tree_files(repository, commit, cart_id, metadata_only=False):
     require(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository), 'Invalid repository')
     require(re.fullmatch(r'[a-f0-9]{40}', commit), 'Invalid commit')
     sha = commit
@@ -183,6 +197,8 @@ def tree_files(repository, commit, cart_id):
         tree = api(f'/repos/{repository}/git/trees/{sha}')
         require(not tree.get('truncated') and len(tree['tree']) <= MAX_FILES, 'Oversized tree')
         for entry in tree['tree']:
+            if metadata_only and (prefix or entry['path'] != 'submission.json'):
+                continue
             name = prefix + entry['path']
             require(safe_path(name), 'Unsafe path')
             if entry['type'] == 'tree':
@@ -225,7 +241,7 @@ def check_pr(event_path, output):
     cart_id = ids.pop()
     files, revision = tree_files(pr['head']['repo']['full_name'], pr['head']['sha'], cart_id)
     trusted_base = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
-    prior, _ = tree_files(REPO, trusted_base, cart_id)
+    prior, _ = tree_files(REPO, trusted_base, cart_id, metadata_only=True)
     previous = json.loads(prior['submission.json']) if prior else None
     require(api(f'/repos/{REPO}/pulls/{pr["number"]}')['head']['sha'] == pr['head']['sha'], 'PR changed during validation')
     meta, raw, _, _ = validate(files, cart_id, int(pr['user']['id']), previous)
