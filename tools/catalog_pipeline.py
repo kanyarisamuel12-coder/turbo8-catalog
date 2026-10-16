@@ -97,13 +97,14 @@ def validate(files, cart_id, actor=None, previous=None, check_js=True):
     resolution = index.get('resolution', {'width': 256, 'height': 144})
     require(isinstance(resolution, dict), 'Invalid canvas')
     w, h = resolution.get('width'), resolution.get('height')
-    require(all(type(n) is int and 64 <= n <= 512 for n in [w, h]), 'Invalid canvas dimensions')
+    require(all(type(n) in (int, float) and 64 <= n <= 512 and int(n) == n for n in [w, h]), 'Invalid canvas dimensions')
+    w, h = int(w), int(h)
     require(w * h <= 196608 and max(w/h, h/w) <= 3, 'Canvas exceeds supported limits')
     cover = cartridge.get('cover.png', b'')
     require(len(cover) <= 128 * 1024 and png_size(cover) == (256, 144), 'Cover must be 256 x 144 PNG, at most 128 KiB')
     scripts = index.get('scripts')
     require(isinstance(scripts, list) and 1 <= len(scripts) <= 32, 'Invalid script list')
-    require(all(isinstance(s, str) and re.fullmatch(r'[A-Za-z0-9_-]+\.js', s) for s in scripts), 'Invalid script filename')
+    require(all(isinstance(s, str) and re.fullmatch(r'[A-Za-z_][A-Za-z0-9_-]{0,63}\.js', s) for s in scripts), 'Invalid script filename')
     require(len(set(scripts)) == len(scripts), 'Duplicate scripts')
     allowed_files = set(scripts) | {'index.json', 'cover.png', 'sprites.png', 'maps.json', 'sfx.json', 'music.json', 'palette.json', 'spriteMeta.json', 'flags.json', 'sprites.json', 'pico8.json', 'postEffects.json', 'virtualControls.json'}
     images = index.get('images', [])
@@ -111,7 +112,7 @@ def validate(files, cart_id, actor=None, previous=None, check_js=True):
     image_bytes = image_pixels = 0
     image_ids = set()
     for entry in images:
-        require(isinstance(entry, dict) and isinstance(entry.get('id'), str) and re.fullmatch(r'[A-Za-z0-9_-]{1,64}', entry['id']), 'Invalid image entry')
+        require(isinstance(entry, dict) and isinstance(entry.get('id'), str) and re.fullmatch(r'[A-Za-z][A-Za-z0-9_-]{0,63}', entry['id']), 'Invalid image entry')
         require(entry['id'] not in image_ids, 'Duplicate image ID')
         image_ids.add(entry['id'])
         name = 'images/' + entry['id'] + '.png' 
@@ -223,7 +224,8 @@ def check_pr(event_path, output):
     require(len(ids) == 1, 'Submit one cartridge per PR')
     cart_id = ids.pop()
     files, revision = tree_files(pr['head']['repo']['full_name'], pr['head']['sha'], cart_id)
-    prior, _ = tree_files(REPO, pr['base']['sha'], cart_id)
+    trusted_base = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+    prior, _ = tree_files(REPO, trusted_base, cart_id)
     previous = json.loads(prior['submission.json']) if prior else None
     require(api(f'/repos/{REPO}/pulls/{pr["number"]}')['head']['sha'] == pr['head']['sha'], 'PR changed during validation')
     meta, raw, _, _ = validate(files, cart_id, int(pr['user']['id']), previous)
