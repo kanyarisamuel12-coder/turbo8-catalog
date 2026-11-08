@@ -228,10 +228,10 @@
     "palette": 256,
     "pathLength": 160,
     "scriptName": 128,
-    "scripts": 32,
+    "scripts": 1024,
     "sfx": 256,
     "spritePixels": 64,
-    "sprites": 4096,
+    "sprites": 16384,
     "virtualButtons": 10,
     "zipBytes": 33554432
   },
@@ -253,18 +253,21 @@
     "pico8",
     "postEffects",
     "virtualControls",
-    "virtualButtons"
+    "virtualButtons",
+    "gbaPort",
+    "portPlan",
+    "generatedCode"
   ],
   "schema": 1,
   "source_sha256": {
     "Editor/cartridge_cover.gd": "9616189ddb930fc9f9d160418282ffc949a097c536510e01455a8abc3953d72b",
     "Editor/display_config.gd": "5647c72081539dcf28a19412b77616ae87232e35206de9832884b917e22cf1bb",
-    "Editor/document.gd": "346f57965c04eda6582dbc4de73ea3245c43c48c22e25746d891b5d596194a7b",
+    "Editor/document.gd": "230d71a03cb7ee99dbcb49190c416ecd7c39725a3fda038d61c4e20d2fea535f",
     "Editor/effects_panel.gd": "39eb88fbe7ebf002af10b2d46f98fe027093cfdec3feec4cced84d41770fce8e",
     "Editor/image_resources.gd": "f79e6c6b6dc64a5829f7e79a9b25be6bc51a11d6e37169e40f0165694840572b",
     "Editor/input_config.gd": "02d130dba33e30bf415d4c1a7f0781ee01654a71c5c80d54142d1dedad12ff15",
-    "Editor/online_submissions.gd": "856d2444883860ce09bb40b08c3db8ffd77d55ea0746e71c5a857eb1c06797d8",
-    "Editor/run_view.gd": "3c36d3aad21366a6dd2a194e92866cc56c0aaa8cf169f2f607e98b01734bfd19",
+    "Editor/online_submissions.gd": "bcdbcbc7f3c873a32a209b621a89bedfa4e5f74b52d7d6c4e67776659a093860",
+    "Editor/run_view.gd": "ea1c6c37d13722c39896f4ef771873293adac0f4c5ec1a242028a22c68a8cfd5",
     "Runtime/display-config.json": "ef4daa396112307588d5ab684c58a494b543a4756a0261edd1cd4954617204d7",
     "Runtime/image-config.json": "6dfa7a69db5a5269cd28b9d69e68d38b7e30aee90238a4d4b3595bdd206a362d"
   },

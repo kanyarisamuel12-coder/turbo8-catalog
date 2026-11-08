@@ -45,12 +45,16 @@ def cases(fixture):
     valid_map = {'width': 1, 'height': 1, 'tilewidth': 8, 'tileheight': 8,
                  'orientation': 'orthogonal', 'layers': [{'type': 'tilelayer', 'data': [4096]}]}
     add('valid-map', {'maps': [valid_map]})
+    for tile_id, accepted in [(0, True), (4097, True), (16384, True), (16385, False), (-1, False)]:
+        m = copy.deepcopy(valid_map)
+        m['layers'][0]['data'] = [tile_id]
+        add(f'map-tile-id-{tile_id}', {'maps': [m]}, accepted)
     add('map-legacy-nine-layers', {'maps': [dict(valid_map, layers=valid_map['layers'] * 9)]})
     add('map-missing-layers', {'maps': [{'width': 0}]}, False)
     for name, change in [('tile-size', {'tilewidth': 16}), ('orientation', {'orientation': 'isometric'}),
                          ('width', {'width': 0}), ('fractional-width', {'width': 1.5})]:
         add('map-invalid-' + name, {'maps': [dict(valid_map, **change)]}, False)
-    for name, change in [('length', {'data': []}), ('id', {'data': [4097]}),
+    for name, change in [('length', {'data': []}),
                          ('fractional-id', {'data': [1.5]}), ('offset', {'x': 1})]:
         m = copy.deepcopy(valid_map); m['layers'][0].update(change)
         add('map-invalid-' + name, {'maps': [m]}, False)
@@ -82,6 +86,8 @@ def cases(fixture):
     add('flags-out-of-range', {'flags': [256]}, False)
     add('flags-bool-invalid', {'flags': [True]}, False)
     add('sprite-short-valid', {'sprites': [[None, '#aAbBcC']]})
+    for count, accepted in [(4097, True), (16384, True), (16385, False)]:
+        add(f'sprite-count-{count}', {'sprites': [[]] * count}, accepted)
     add('sprite-too-long', {'sprites': [[None] * 65]}, False)
     add('palette-invalid', {'palette': ['not-a-color']}, False)
     for width, height, accepted in [(64, 64, True), (512, 384, True), (64, 192, True),
