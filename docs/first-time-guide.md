@@ -139,3 +139,9 @@ API 计费与 ChatGPT 订阅分开，请先在服务商后台确认权限和余�
 
 向导会包含在纳入本次改动的后续 Turbo8 构建中。如果你安装的版本还没有向导，
 请从 **AI → SETTINGS** 按详细指南配置；文档更新不代表新安装包已经发布。
+
+## Share a cartridge · 发布卡带
+
+In **PUBLISH**, open **Cartridge publishing guide** for official submission and author repository instructions. **ONLINE → SOURCE** opens the same guide at the author section, where you can save a starter template.
+
+在 **PUBLISH** 点击 **Cartridge publishing guide**，可切换到简体中文，查看官方投稿和作者源发布步骤。在 **ONLINE → SOURCE** 点击同一指南，会直接打开作者源章节，可以保存建仓模板。

@@ -1,6 +1,8 @@
 # Submit a Turbo8 cartridge
 
-Use SUBMIT / UPDATE ONLINE in the Turbo8 Player library. GitHub authentication uses your own account. Every submission is public and reviewed before publication.
+Step-by-step publishing guides: [English](docs/publishing.en.md) · [简体中文](docs/publishing.zh-CN.md).
+
+Open your cartridge and choose **PUBLISH → ONLINE (SUBMIT FOR REVIEW) → CONTINUE TO ONLINE**. After completing the form, choose **SUBMIT FOR REVIEW**. The **Cartridge publishing guide** in PUBLISH also explains how to distribute games from your own GitHub repository. GitHub authentication uses your own account. Every submission is public and reviewed before publication.
 
 One pull request changes one `carts/u<GitHub numeric user ID>-<32 lowercase hex>/` directory. The directory contains `submission.json` and `cartridge/` with the expanded Turbo8 ZIP. Authors must own or have permission to distribute all submitted code, artwork and audio. No separate code or asset permission fields are collected. Keep any required attribution in the cartridge.
 
