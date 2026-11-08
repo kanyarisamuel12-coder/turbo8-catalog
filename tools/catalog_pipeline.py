@@ -341,8 +341,17 @@ def release_asset(tag, filename, raw, commit):
     public = f'https://github.com/{REPO}/releases/download/{tag}/{filename}'
     for attempt in range(4):
         url = public if attempt == 0 else f'{public}?verify={time.time_ns()}'
+        request = urllib.request.Request(url)
+        if attempt >= 2:
+            # Read anonymously through GitHub's asset API when its web gateway is down.
+            if not asset:
+                fresh = json.loads(gh('api', f'repos/{REPO}/releases/{existing["id"]}'))
+                asset = next(a for a in fresh['assets'] if a['name'] == filename)
+            request = urllib.request.Request(
+                f'https://api.github.com/repos/{REPO}/releases/assets/{int(asset["id"])}',
+                headers={'Accept': 'application/octet-stream'})
         try:
-            with urllib.request.urlopen(url, timeout=60) as response:
+            with urllib.request.urlopen(request, timeout=60) as response:
                 downloaded = response.read(MAX_ZIP + 1)
             break
         except urllib.error.HTTPError as error:
