@@ -339,8 +339,17 @@ def release_asset(tag, filename, raw, commit):
                '-F', 'draft=false', '-f', 'make_latest=false')
     # Verify public delivery before exposing a catalog entry.
     public = f'https://github.com/{REPO}/releases/download/{tag}/{filename}'
-    with urllib.request.urlopen(public, timeout=60) as response:
-        downloaded = response.read(MAX_ZIP + 1)
+    for attempt in range(4):
+        url = public if attempt == 0 else f'{public}?verify={time.time_ns()}'
+        try:
+            with urllib.request.urlopen(url, timeout=60) as response:
+                downloaded = response.read(MAX_ZIP + 1)
+            break
+        except urllib.error.HTTPError as error:
+            if error.code not in (502, 503, 504) or attempt == 3:
+                raise
+            print(f'Retrying public verification of {filename} after HTTP {error.code}', flush=True)
+            time.sleep(2 ** attempt)
     require(downloaded == raw, 'Public Release download verification failed')
 
 
